@@ -17,9 +17,6 @@
 .vs/
 .vscode/
 
-# Generated reports
-**/newman/
-
 # OS files
 .DS_Store
 Thumbs.db
