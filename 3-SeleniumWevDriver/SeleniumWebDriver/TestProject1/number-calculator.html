@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Calculator</title>
+</head>
+<body>
+    <h1>Number Calculator</h1>
+
+    <input id="number1" type="text">
+
+    <select id="operation">
+        <option value="+">+ (sum)</option>
+        <option value="-">- (subtract)</option>
+        <option value="*">* (multiply)</option>
+        <option value="/">/ (divide)</option>
+    </select>
+
+    <input id="number2" type="text">
+
+    <button id="calcButton" type="button">Calculate</button>
+    <button id="resetButton" type="button">Reset</button>
+
+    <div id="result"></div>
+
+    <script>
+        const number1 = document.getElementById("number1");
+        const number2 = document.getElementById("number2");
+        const operation = document.getElementById("operation");
+        const result = document.getElementById("result");
+
+        document.getElementById("calcButton").addEventListener("click", () => {
+            const first = Number(number1.value);
+            const second = Number(number2.value);
+
+            if (Number.isNaN(first) || Number.isNaN(second)) {
+                result.textContent = "Result: invalid input";
+                return;
+            }
+
+            let calculatedResult;
+
+            switch (operation.value) {
+                case "+":
+                    calculatedResult = first + second;
+                    break;
+                case "-":
+                    calculatedResult = first - second;
+                    break;
+                case "*":
+                    calculatedResult = first * second;
+                    break;
+                case "/":
+                    calculatedResult = first / second;
+                    break;
+            }
+
+            result.textContent = `Result: ${calculatedResult}`;
+        });
+
+        document.getElementById("resetButton").addEventListener("click", () => {
+            number1.value = "";
+            number2.value = "";
+            operation.selectedIndex = 0;
+            result.textContent = "";
+        });
+    </script>
+</body>
+</html>
