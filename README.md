@@ -1,4 +1,16 @@
-### Exercise: Automated Testing 🫡
+<div align="center">
+
+# 🧪 Exercise: Automated Testing 🫡
+
+### Modernized, executed, and verified — 76 checks, 0 failures.
+
+<img src="docs/assets/sweating-programmer.gif"
+     alt="Programmer surviving automated testing"
+     width="380">
+
+<p><em>When the learning resources are outdated, but all tests still pass.</em> 😅</p>
+
+</div>
 
 ---
 
